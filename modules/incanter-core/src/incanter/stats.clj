@@ -2049,6 +2049,8 @@
   Returns:
     a map, of type ::linear-model, containing:
       :design-matrix -- a matrix containing the independent variables, and an intercept columns
+      :x -- same as :design-matrix
+      :y -- the dependent variables (the first parameter)
       :coefs -- the regression coefficients
       :t-tests -- t-test values of coefficients
       :t-probs -- p-values for t-test values of coefficients
@@ -2060,6 +2062,13 @@
       :ssr -- the regression sum of squares, also called the explained sum of squares
       :sst -- the total sum of squares (proportional to the sample variance)
       :r-square -- coefficient of determination
+      :msr -- mean square due to regression
+      :mse -- mean squared error
+      :f-stat -- (/ msr mse) (see http://en.wikipedia.org/wiki/F-test)
+      :f-prob -- 
+      :df -- degrees of freedom [x y]
+      :coef-var --
+      :adj-r-square --
 
   Examples:
     (use '(incanter core stats datasets charts))
